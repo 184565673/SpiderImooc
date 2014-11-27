@@ -5,7 +5,7 @@ var urlparse = require('url').parse;
 var courseId = process.argv.splice(2, 1);
 
 var download = function(url, savefile, callback) {
-	savefile = savefile.replace(/\(.*\)/,'');
+    savefile = savefile.replace(/\(.*\)/,'');
     console.log('download', url, 'to', savefile)
     var urlinfo = urlparse(url);
     var options = {
